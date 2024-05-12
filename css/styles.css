@@ -1,0 +1,209 @@
+/* styles.css */
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #044cb0bb 50%, #c46de4 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+.content {
+  background-color:rgba(255,255,255,.8);
+  border-radius:.25em;
+  box-shadow:0 0 .25em rgba(0,0,0,.25);
+  box-sizing:border-box;
+  left:50%;
+  padding:10vmin;
+  position:fixed;
+  text-align:center;
+  top:50%;
+  transform:translate(-50%, -50%);
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+.body {
+    margin: 0;
+    padding-top: 0px; /* Adjust according to the height of your header */
+}
+
+.logo {
+    padding: 1px;
+    border-radius: 50%;
+    transition: all 0.2s ease-in;
+    height: 60px;
+}
+
+.logo:hover {
+    border-radius: 30%;
+}
+
+.header {
+    background-color: none;
+    color: aliceblue;
+    padding: 5px;
+    padding-top: 40px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    text-align: fixed;
+    width: auto;
+    height: 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    transition: background-color 0.5s ;
+}
+
+.contact-button {
+    background-color: #fff;
+    color: #3A1237;
+    padding: 18px;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: dashed;
+    margin-right: 10px;
+    margin-left: auto;
+    border: 2px solid #3A1237;
+    transition: all 0.3s linear, color 0.2s;
+}
+
+.contact-button:hover {
+    color: #fff;
+    padding: 18px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    text-decoration: dashed;
+    margin-right: 10px;
+    margin-left: auto;
+    border: 2px solid #250523;
+    background-color: #551e50;
+}
+
+.buttons {
+    padding-right: 10px ;
+}
+
+.intro-heading {
+    padding-top: 15px ;
+    color: #3A1237;
+    padding-left: 10px;
+    font-family: "Lucida Console";
+    text-align: center;
+    font-weight: 900;
+    font-size: 19px;
+    text-decoration-line: overline;
+    margin: auto;
+    width: 50%;
+    min-width: 350px;
+}
+
+.intro-details {
+    padding-top: 10px ;
+    color: #3A1237;
+    padding-left: 10px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 900;
+    transition: all 0.5s ease-in-out;
+    margin: auto;
+    width: 65%;
+    min-width: 350px;
+}
+
+.intro-details:hover {
+    font-size: 13px;
+}
+
+.owner {
+  color: #1d0d1b;
+  transition: all 0.5s ease-in-out;
+}
+
+.owner:hover {
+  font-size: 30px;
+}
+
+.pg-img {
+    border-radius: 50%;
+    height: 300px;
+    transition: height 0.5s, border-radius 0.5s;
+}
+.pg-img:hover {
+    border-radius: 30%;
+    height: 340px;
+}
+
+.pg-div-img {
+    text-align: center;
+    padding-top: 20px;
+}
+
+.pg-contact-div-img {
+  text-align: left;
+  padding-left: 3rem;
+  padding-top: 50px;
+}
+
+.pg-contact-img {
+  border-radius: 50%;
+  height: 100px;
+  transition: height 0.5s, border-radius 0.5s;
+}
+.pg-contact-img:hover {
+  border-radius: 30%;
+  height: 110px;
+}
+
+.Study-button {
+  background-color: #ffffff6b;
+  color: #3A1237;
+  padding: 18px;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: dashed;
+  margin-right: 10px;
+  margin-left: auto;
+  border: 2px solid #3A1237;
+  transition: all 0.3s linear, color 0.2s;
+}
+
+.Study-button:hover {
+  color: #fff;
+  padding: 18px;
+  border: none;
+  border-radius: 25px;
+  font-size: 18px;
+  text-decoration: dashed;
+  margin-right: 10px;
+  margin-left: auto;
+  border: 2px solid #250523;
+  background-color: #551e50;
+}
+
+.button-Study {
+  padding-right: 10px ;
+  align-items: center;
+  text-align: center;
+}
