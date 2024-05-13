@@ -121,18 +121,19 @@
     text-decoration-line: overline;
     margin: auto;
     width: 50%;
-    min-width: 350px;
+    min-width: 320px;
 }
 
 .form-center {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  height: 110vh;
+  padding: 5px;
 }
 
 form {
-  max-width: 350px;
+  max-width: 360px;
   padding: 35px;
   background-color: #2b0828;
   border-radius: 20px;
