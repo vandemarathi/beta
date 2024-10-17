@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Custom Video Player</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Include HLS.js -->
+    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+</head>
+
+<body>
+    <div id="containers" class="hidden">
+        <div id="container">
+        <!-- Thumbnails and Titles will be injected here by script.js -->
+        </div>
+    </div>
+    <div class="video-container hidden" id="videoContainer">
+        <video id="video" preload="metadata" poster="logo-large.png"></video>
+
+        <!-- Play/Pause Animation -->
+        <div class="play-pause-animation" id="playPauseAnimation">
+            <!-- Play Icon SVG -->
+            <svg id="playIcon" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24">
+                <path d="M8 5v14l11-7z" />
+            </svg>
+            <!-- Pause Icon SVG -->
+            <svg id="pauseIcon" style="display: none;" xmlns="http://www.w3.org/2000/svg" fill="white"
+                viewBox="0 0 24 24">
+                <path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" />
+            </svg>
+        </div>
+
+        <!-- Controls -->
+        <div class="controls" id="controls">
+            <!-- Seek Bar -->
+            <div class="seek-bar-container">
+                <input type="range" id="seekBar" class="seek-bar" min="0" max="100" value="0">
+            </div>
+
+            <!-- Lower Controls -->
+            <div class="lower-controls">
+                <div class="left-controls">
+                    <button id="playPauseBtn" aria-label="Play">
+                        <svg id="playPauseIcon" fill="white" viewBox="0 0 24 24">
+                            <path d="M8 5v14l11-7z" />
+                        </svg>
+                    </button>
+                    <button id="muteBtn" aria-label="Mute">
+                        <svg id="muteIcon" fill="white" viewBox="0 0 24 24">
+                            <path
+                                d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-.77-3.29-2-4.31v8.62c1.23-1.02 2-2.54 2-4.31zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.84-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z" />
+                        </svg>
+                    </button>
+                    <input type="range" id="volumeBar" class="volume-bar" min="0" max="1" step="0.01" value="1">
+                    <span id="currentTime" class="time">0:00</span> / <span id="duration" class="time">0:00</span>
+                </div>
+
+                <div class="right-controls">
+                    <select id="speed" class="speed-select" aria-label="Speed">
+                        <option value="0.5">0.5x</option>
+                        <option value="1" selected>1x</option>
+                        <option value="1.5">1.5x</option>
+                        <option value="2">2x</option>
+                    </select>
+                    <button id="fullscreenBtn" aria-label="Fullscreen">
+                        <svg fill="white" viewBox="0 0 24 24">
+                            <path d="M7 14H5v5h5v-2H7v-3zm0-4h2V7h3V5H7v5zm10 8h-3v2h5v-5h-2v3zm-3-8h3v3h2V5h-5v2z" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
